@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace AdvancedTopics
 {
@@ -10,6 +7,12 @@ namespace AdvancedTopics
     {
         static void Main(string[] args)
         {
+            var configuration = ConfigurationManager.AppSettings;
+
+            var name = configuration.Get("name");
+            var number = int.Parse(configuration.Get("number"));
+
+            Console.WriteLine($"name = {name}, number = {number}");
         }
     }
 }

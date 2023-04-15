@@ -13,6 +13,8 @@ namespace AdvancedTopics
             var number = int.Parse(configuration.Get("number"));
 
             Console.WriteLine($"name = {name}, number = {number}");
+
+            Console.ReadLine();
         }
     }
 }

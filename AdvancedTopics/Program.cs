@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ExtensionMethodsNamespace;
+using ExampleClasses;
 
 namespace AdvancedTopics
 {
@@ -10,6 +8,14 @@ namespace AdvancedTopics
     {
         static void Main(string[] args)
         {
+            #region Extension method - Describe() on the "Example" class
+
+            Example example = new Example("Some name", 42);
+            Console.WriteLine(example.Describe());
+
+            #endregion
+
+            Console.ReadLine();
         }
     }
 }
